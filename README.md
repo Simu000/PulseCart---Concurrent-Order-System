@@ -67,10 +67,12 @@ Stock Update (Protected using mutex lock)
 ### Install Dependencies
 pip install flask requests psutil
 
-##3  Run Application
+###  Run Application: 
+
 ``` python app.py ```
 
-##3 Open in browser:
+### Open in browser:
+
 ``` http://localhost:5000 ```
 
 
