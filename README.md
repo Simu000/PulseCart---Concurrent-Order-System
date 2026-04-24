@@ -1,73 +1,69 @@
 # PulseCart – Concurrent Order Processing System
 
-PulseCart is a Flask-based web application that simulates an e-commerce order processing system. It demonstrates key concepts of concurrency, synchronization, and system performance using the Producer–Consumer model, semaphores, mutex locks, and thread pools.
+PulseCart is a Flask-based web application that simulates an e-commerce order processing system. It demonstrates key concepts of concurrency, synchronization, and system performance using the Producer–Consumer model, semaphores, mutex locks, and thread pools. The project bridges theoretical knowledge with practical implementation in a real-world inspired system.
 
 ---
 
-## Features
+## 🚀 Features
 
-- Producer–Consumer model with bounded buffer
-- Thread-safe operations using mutex and semaphores
-- Concurrent order processing using thread pools
-- Async producer simulation using `asyncio`
-- CAP theorem simulation (Consistency vs Availability)
-- Performance and stress testing
-- Docker containerization
-- Cloud deployment (Render)
-
----
-
-## Concepts Demonstrated
-
-- Concurrency vs Parallelism
-- Thread synchronization
-- Amdahl’s Law (performance limits)
-- CAP Theorem trade-offs
-- System bottlenecks and scalability limits
+- Producer–Consumer model with bounded buffer  
+- Thread-safe operations using mutex and semaphores  
+- Concurrent order processing using thread pools  
+- Async producer simulation using asyncio  
+- CAP theorem simulation (Consistency vs Availability)  
+- Automated performance and stress testing  
+- Docker containerization  
+- Cloud deployment (Render)  
 
 ---
 
-## System Architecture
-User (Browser)
-↓
-Flask Web App (Routes)
-↓
-Producer (Async Orders)
-↓
-Bounded Buffer (Queue)
-↓
-Consumers (Thread Pool)
-↓
-Stock Update (Mutex Protected)
+## 🧠 Concepts Demonstrated
 
+- Concurrency vs Parallelism  
+- Thread synchronization and race condition handling  
+- Amdahl’s Law (limits of speedup)  
+- CAP Theorem trade-offs  
+- System bottlenecks and scalability limits  
+
+---
+
+## 🏗️ System Architecture
+
+User (Browser)  
+↓  
+Flask Web App (Routes)  
+↓  
+Async Producer (Order Generation)  
+↓  
+Bounded Buffer (Queue controlled using semaphores)  
+↓  
+Consumers (Thread Pool Workers)  
+↓  
+Stock Update (Protected using mutex lock)  
 
 ---
 
 ## ⚙️ Technologies Used
 
-- Python (Backend logic)
-- Flask (Web framework)
-- HTML & CSS (Frontend UI)
-- threading (Synchronization)
-- concurrent.futures (Thread pool)
-- asyncio (Async simulation)
-- requests (Performance testing)
-- Docker (Containerization)
-- Render (Cloud deployment)
+| Technology | Purpose |
+|----------|--------|
+| Python | Backend logic |
+| Flask | Web framework |
+| HTML | UI structure |
+| CSS | UI styling |
+| threading | Synchronization (mutex, semaphores) |
+| concurrent.futures | Thread pool execution |
+| asyncio | Async producer simulation |
+| requests | Performance testing |
+| statistics | Performance analysis |
+| Docker | Containerization |
+| Render | Cloud deployment |
+| Linux (Ubuntu) | Development environment |
 
 ---
 
 ## 🛠️ Setup Instructions
 
-### 1. Clone the Repository
+### Install Dependencies
 ```bash
-git clone https://github.com/your-username/pulsecart-concurrent-order-system.git
-cd pulsecart-concurrent-order-system
-2. Install Dependencies
 pip install flask requests psutil
-3. Run the Application
-python app.py
-
-Open in browser:
-
-http://localhost:5000
