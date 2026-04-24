@@ -39,7 +39,7 @@ def home():
 
 
 # -----------------------------
-# Producer (FIXED)
+# Producer 
 # -----------------------------
 async def producer_task():
     global order_id
@@ -59,7 +59,7 @@ async def producer_task():
 
 
 # -----------------------------
-# Add Order (FIXED)
+# Add Order 
 # -----------------------------
 @app.route("/add", methods=["GET", "POST"])
 def add():
