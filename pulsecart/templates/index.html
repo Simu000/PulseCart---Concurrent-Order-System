@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PulseCart Final</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+}
+
+.container{
+    width:90%;
+    max-width:950px;
+    margin:auto;
+    padding:30px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.sub{
+    text-align:center;
+    color:#cbd5e1;
+    margin-bottom:30px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 6px 14px rgba(0,0,0,0.25);
+    text-align:center;
+}
+
+.card h2{
+    margin:0;
+    font-size:28px;
+}
+
+.card p{
+    margin:8px 0 0;
+    color:#cbd5e1;
+}
+
+.actions{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:12px;
+    margin-bottom:25px;
+}
+
+a{
+    text-decoration:none;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    color:white;
+}
+
+.green{background:#16a34a;}
+.blue{background:#2563eb;}
+.orange{background:#ea580c;}
+.gray{background:#475569;}
+.red{background:#dc2626;}
+
+.logs{
+    background:#111827;
+    border-radius:14px;
+    padding:18px;
+    min-height:320px;
+    max-height:420px;
+    overflow-y:auto;
+}
+
+.logs h3{
+    margin-top:0;
+}
+
+.entry{
+    background:#1f2937;
+    padding:10px;
+    border-radius:10px;
+    margin-bottom:8px;
+    color:#e5e7eb;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>PulseCart Final</h1>
+<p class="sub">Semaphore + Thread Pool + Async Producer + CAP Theorem</p>
+
+<div class="cards">
+    <div class="card">
+        <h2>{{ stock }}</h2>
+        <p>Stock Left</p>
+    </div>
+
+    <div class="card">
+        <h2>{{ qsize }}</h2>
+        <p>Queue Size</p>
+    </div>
+
+    <div class="card">
+        <h2>{{ mode }}</h2>
+        <p>Current Mode</p>
+    </div>
+</div>
+
+<div class="actions">
+    <a href="/add"><button class="green">Add Customer Order</button></a>
+    <a href="/process"><button class="blue">Process One Order</button></a>
+    <a href="/auto"><button class="orange">Auto Process Queue</button></a>
+    <a href="/consistency"><button class="gray">Consistency Mode</button></a>
+    <a href="/availability"><button class="gray">Availability Mode</button></a>
+    <a href="/reset"><button class="red">Reset System</button></a>
+</div>
+
+<div class="logs">
+    <h3>System Logs</h3>
+
+    {% for item in logs|reverse %}
+        <div class="entry">{{ item }}</div>
+    {% endfor %}
+
+</div>
+
+</div>
+
+</body>
+</html>
