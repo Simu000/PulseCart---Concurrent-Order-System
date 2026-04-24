@@ -62,8 +62,15 @@ Stock Update (Protected using mutex lock)
 
 ---
 
-## 🛠️ Setup Instructions
+##  Setup Instructions
 
 ### Install Dependencies
-```bash
 pip install flask requests psutil
+
+##3  Run Application
+``` python app.py ```
+
+##3 Open in browser:
+``` http://localhost:5000 ```
+
+
