@@ -65,7 +65,7 @@ Stock Update (Protected using mutex lock)
 ##  Setup Instructions
 
 ### Install Dependencies
-pip install flask requests psutil
+``` pip install flask requests psutil ```
 
 ###  Run Application: 
 
